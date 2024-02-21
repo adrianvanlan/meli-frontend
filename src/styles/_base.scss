@@ -1,0 +1,11 @@
+@import "node_modules/normalize-scss/sass/normalize";
+@import "./variables";
+@import "./fonts";
+@import "./colors";
+
+body {
+    margin: 0;
+    font-family: 'Roboto', -apple-system, Helvetica, Arial, sans-serif;
+    background-color: $bg-color;
+    color: $primary-text;
+  }
