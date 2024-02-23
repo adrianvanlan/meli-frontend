@@ -1,0 +1,27 @@
+@import '../../styles/base';
+
+.AppBar {
+  background-color: $primary;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .AppBar__Container {
+    @extend .container;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+
+  /*
+  .SearchBar {
+    margin: auto !important;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+  */
+}

@@ -37,7 +37,7 @@ npm run dev
 #### API docs
 
 ```
-http://localhost:5000/api-docs
+http://localhost:3000/
 ```
 
 &nbsp;

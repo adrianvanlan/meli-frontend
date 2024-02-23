@@ -1,11 +1,42 @@
-@import "node_modules/normalize-scss/sass/normalize";
-@import "./variables";
-@import "./fonts";
-@import "./colors";
+//
+@import-normalize;
+@import 'variables';
+@import 'fonts';
+@import 'colors';
+@import 'mixins';
 
 body {
-    margin: 0;
-    font-family: 'Roboto', -apple-system, Helvetica, Arial, sans-serif;
-    background-color: $bg-color;
-    color: $primary-text;
+  margin: 0;
+  font-family:
+    'Roboto',
+    -apple-system,
+    Helvetica,
+    Arial,
+    sans-serif;
+  background-color: $bg-color;
+  color: $primary-text;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+
+  @include mq(sm) {
+    max-width: $col-sm;
   }
+
+  @include mq(md) {
+    max-width: $col-md;
+  }
+
+  @include mq(lg) {
+    max-width: $col-lg;
+  }
+
+  @include mq(xl) {
+    max-width: $col-xl;
+  }
+}
