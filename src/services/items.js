@@ -11,3 +11,15 @@ export const fetchItems = async (q) => {
       throw new Error(err);
     });
 };
+
+export const fetchItem = async (id) => {
+  if (!id) return {};
+  return await clienteAxios
+    .get(`/api/items/${id}`)
+    .then((res) => {
+      return res.data;
+    })
+    .catch((err) => {
+      throw new Error(err);
+    });
+};

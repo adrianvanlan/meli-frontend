@@ -3,5 +3,6 @@ export const getCurrencyPrice = (price, currency) => {
     style: 'currency',
     currency: currency,
     maximumFractionDigits: 0,
+    currencyDisplay: 'symbol',
   });
 };
