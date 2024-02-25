@@ -9,7 +9,6 @@ describe('Should render AppBar', () => {
         <AppBar />
       </MemoryRouter>,
     );
-    //console.log(wrapper.debug());
     expect(wrapper).toMatchSnapshot();
   });
 });

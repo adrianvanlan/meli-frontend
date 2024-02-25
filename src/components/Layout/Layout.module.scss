@@ -6,7 +6,6 @@
   margin: 0 auto;
   padding-right: 1rem;
   padding-left: 1rem;
-  width: 100%;
 
   @include mq(sm) {
     max-width: $col-sm;
