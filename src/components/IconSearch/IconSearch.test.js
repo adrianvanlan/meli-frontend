@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react';
 import IconSearch from './IconSearch';
 import { MemoryRouter } from 'react-router-dom';
+import { render } from '@testing-library/react';
 
 describe('Should render IconSearch', () => {
   it('should render IconSearch', () => {

@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import logo1x from '../../assets/Logo_ML.png';
 import logo2x from '../../assets/Logo_ML@2x.png.png';
-import './Logo.module.scss';
+import styles from './Logo.module.scss';
 
 const logo = ({ width }) => (
-  <Link to="/" className="Logo__Link">
+  <Link to="/" className={styles.Logo__Link}>
     <img
       width={width || 106}
       src={logo1x}

@@ -1,21 +1,23 @@
-import { Routes, Route } from 'react-router-dom';
-import styles from './App.module.scss';
-import Layout from './components/Layout/Layout';
+import { Route, Routes } from 'react-router-dom';
+
 import { ErrorBoundary } from 'react-error-boundary';
 import ErrorFallback from './components/ErrorFallback/ErrorFallback';
+import Layout from './components/Layout/Layout';
+import ListItems from './components/ListItems/ListItems';
+import styles from './App.module.scss';
 
 function App() {
-  const handleError = (error, info) => {
-    console.log(error, info);
+  const logError = (error, info) => {
+    console.error(error, info);
   };
 
   return (
     <div className={styles.App}>
-      <ErrorBoundary fallback={<ErrorFallback />} onError={handleError}>
+      <ErrorBoundary FallbackComponent={ErrorFallback} onError={logError}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="/items/:id" element={<div>items</div>} />
-            <Route path="/items/" element={<div>item</div>} />
+            <Route path="/items/" element={<ListItems />} />
           </Route>
         </Routes>
       </ErrorBoundary>

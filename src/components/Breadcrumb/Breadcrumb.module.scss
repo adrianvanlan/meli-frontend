@@ -1,0 +1,32 @@
+@import 'src/styles/base';
+
+.Breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 16px 0;
+  overflow-x: auto;
+  padding: 0;
+
+  .Breadcrumb__Item {
+    display: flex;
+    align-items: center;
+    color: $secondary-text;
+    font-size: 14px;
+
+    svg {
+      fill: $secondary-text;
+      width: 20px;
+    }
+
+    span {
+      white-space: nowrap;
+    }
+
+    &:last-child {
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+}
