@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react';
 import Layout from './Layout';
 import { MemoryRouter } from 'react-router-dom';
+import { render } from '@testing-library/react';
 
 describe('Should render Layout', () => {
   it('should render Layout', () => {

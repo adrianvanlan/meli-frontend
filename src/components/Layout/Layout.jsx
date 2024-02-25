@@ -1,11 +1,14 @@
-import { Outlet } from 'react-router-dom';
 import AppBar from '../AppBar/AppBar';
+import { Outlet } from 'react-router-dom';
+import styles from './Layout.module.scss';
 
 function Layout() {
   return (
     <>
       <AppBar />
-      <Outlet />
+      <div className={styles.Layout__container}>
+        <Outlet />
+      </div>
     </>
   );
 }

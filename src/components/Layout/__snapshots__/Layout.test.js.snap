@@ -46,6 +46,9 @@ Object {
           </form>
         </div>
       </header>
+      <div
+        class="Layout__container"
+      />
     </div>
   </body>,
   "container": <div>
@@ -90,6 +93,9 @@ Object {
         </form>
       </div>
     </header>
+    <div
+      class="Layout__container"
+    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

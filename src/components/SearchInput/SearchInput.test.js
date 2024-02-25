@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react';
-import SearchInput from './SearchInput';
 import { MemoryRouter } from 'react-router-dom';
+import SearchInput from './SearchInput';
+import { render } from '@testing-library/react';
 
 describe('Should render SearchInput', () => {
   it('should render SearchInput', () => {

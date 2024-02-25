@@ -1,0 +1,18 @@
+@import '../../styles/base';
+
+.ListItems {
+  text-align: center;
+
+  &__Breadcrumb {
+    text-align: left;
+  }
+
+  .NoResultsWrapper {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    text-align: center;
+  }
+}

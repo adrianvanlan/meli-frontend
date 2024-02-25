@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+
 import IconSearch from '../IconSearch/IconSearch';
-import './SearchInput.module.scss';
+import styles from './SearchInput.module.scss';
 
 function SearchInput() {
   const [searchValue, setSearchValue] = useState('');
@@ -27,16 +28,17 @@ function SearchInput() {
   };
 
   return (
-    <form onSubmit={handlerSubmit} className="SearchInput">
+    <form onSubmit={handlerSubmit} className={styles.SearchInput}>
       <input
         autoComplete="off"
-        className="SearchInput__input"
+        className={styles.SearchInput__input}
         name="q"
         placeholder="Buscar productos, marcas y más…"
         value={searchValue}
         onChange={handleChange}
+        autoFocus
       />
-      <button className="SearchInput__button" type="submit">
+      <button className={styles.SearchInput__button} type="submit">
         <IconSearch />
       </button>
     </form>
