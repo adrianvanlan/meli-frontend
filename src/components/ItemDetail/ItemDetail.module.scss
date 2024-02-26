@@ -66,7 +66,7 @@
 
         &__Extra {
           color: $secondary-text;
-          margin-top: 32px;
+          margin-top: 10px;
         }
 
         &__Title {
@@ -134,12 +134,11 @@
       }
 
       &__Right {
-        width: 30%;
+        width: 325px;
 
         &__Info {
           position: sticky;
           top: 30px;
-          max-width: 400px;
         }
       }
     }
