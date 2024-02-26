@@ -19,7 +19,7 @@ function SearchInput() {
     e.preventDefault();
     const inputValue = e.target.q.value;
     if (inputValue) {
-      navigateTo(`/items?search=${inputValue}`);
+      navigateTo(`/items?search=${inputValue.replace(/ /g, '+')}`);
     }
   };
 
