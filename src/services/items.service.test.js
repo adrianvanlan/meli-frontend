@@ -1,5 +1,6 @@
-import { fetchItems } from './items';
-import mockAxios from 'jest-mock-axios';
+import axios from 'axios';
+import { fetchItems } from './items.service';
+import { jest } from '@jest/globals';
 
 const MOCK_ITEMS = {
   author: { name: 'Adrian', lastname: 'Van Langenhove' },
@@ -7,8 +8,7 @@ const MOCK_ITEMS = {
   items: [
     {
       id: 'MLA1397418693',
-      title:
-        'Apple iPhone SE Se (3ª Generación, 64 Gb) - Azul Medianoche - Distribuidor Autorizado',
+      title: 'Apple iPhone SE Se (3ª Generación, 64 Gb)',
       picture: 'http://http2.mlstatic.com/D_696564-MLA52130732644_102022-I.jpg',
       condition: 'new',
       free_shipping: true,
@@ -41,9 +41,11 @@ const MOCK_ITEMS = {
   ],
 };
 
+jest.mock('axios');
+
 describe('Items Service', () => {
   it('should return a list of items', async () => {
-    mockAxios.get.mockImplementationOnce(() =>
+    axios.get.mockImplementationOnce(() =>
       Promise.resolve({ data: MOCK_ITEMS }),
     );
     const data = await fetchItems('iphone');

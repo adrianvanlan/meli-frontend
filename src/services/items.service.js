@@ -1,8 +1,8 @@
-import { clienteAxios } from '../helpers/';
+import axios from 'axios';
 
 export const fetchItems = async (q) => {
   if (!q) return { items: [], categories: [] };
-  return await clienteAxios
+  return await axios
     .get(`/api/items?q=${q}`)
     .then((res) => {
       return res.data;
@@ -14,7 +14,7 @@ export const fetchItems = async (q) => {
 
 export const fetchItem = async (id) => {
   if (!id) return {};
-  return await clienteAxios
+  return await axios
     .get(`/api/items/${id}`)
     .then((res) => {
       return res.data;

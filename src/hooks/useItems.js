@@ -1,4 +1,4 @@
-import { fetchItem, fetchItems } from '../services/items';
+import { fetchItem, fetchItems } from '../services/items.service';
 
 import { useQuery } from '@tanstack/react-query';
 

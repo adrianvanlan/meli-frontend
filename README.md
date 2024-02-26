@@ -2,18 +2,12 @@
 
 ## Local
 
-Requirements: Node >= 21
+Requirements: Node >= 21 and meli-backend running on port 5000 (https://github.com/adrianvanlan/meli-backend)
 
 #### Install
 
 ```
 npm install
-```
-
-#### Lint
-
-```
-npm run lint
 ```
 
 #### Build
@@ -22,45 +16,14 @@ npm run lint
 npm run build
 ```
 
-#### Test
+#### Preview
 
 ```
-npm run test
-```
-
-#### Development
-
-```
-npm run dev
-```
-
-#### API docs
-
-```
-http://localhost:3000/
-```
-
-&nbsp;
-&nbsp;
-
-## Docker
-
-Requirements: Docker
-
-#### Build
-
-```sh
-docker build -t meli-frontend-image .
-```
-
-#### Run
-
-```sh
-docker run --name meli-frontend-container -p 3000:3000 meli-frontend-image
+npm run preview
 ```
 
 #### Visit
 
 ```
-http://localhost:3000/
+http://localhost:8080/
 ```
