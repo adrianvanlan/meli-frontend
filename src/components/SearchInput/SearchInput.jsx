@@ -11,7 +11,7 @@ function SearchInput() {
 
   useEffect(() => {
     const query = new URLSearchParams(search);
-    const q = query.get('q');
+    const q = query.get('search');
     setSearchValue(q || '');
   }, [search]);
 
@@ -19,7 +19,7 @@ function SearchInput() {
     e.preventDefault();
     const inputValue = e.target.q.value;
     if (inputValue) {
-      navigateTo(`/items?q=${inputValue}`);
+      navigateTo(`/items?search=${inputValue}`);
     }
   };
 

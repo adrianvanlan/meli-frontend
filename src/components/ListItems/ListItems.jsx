@@ -20,7 +20,7 @@ function ListItems() {
 
   useEffect(() => {
     const query = new URLSearchParams(search);
-    const q = query.get('q');
+    const q = query.get('search');
     if (q) {
       setSearchString(q);
     }
