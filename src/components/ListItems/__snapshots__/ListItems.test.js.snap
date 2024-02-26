@@ -15,9 +15,7 @@ Object {
             class="Breadcrumb"
           />
         </div>
-        <ul
-          id="results"
-        />
+        <ul />
       </div>
     </div>
   </body>,
@@ -32,9 +30,7 @@ Object {
           class="Breadcrumb"
         />
       </div>
-      <ul
-        id="results"
-      />
+      <ul />
     </div>
   </div>,
   "debug": [Function],

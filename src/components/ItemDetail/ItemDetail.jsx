@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import Breadcrumb from '../Breadcrumb/Breadcrumb';
+import { Helmet } from 'react-helmet-async';
 import ItemDetailSkeleton from './ItemDetailSkeleton';
 import Skeleton from 'react-loading-skeleton';
 import { getCurrencyPrice } from '../../helpers';
@@ -38,6 +39,16 @@ function ItemDetail() {
 
   return (
     <div className={styles.ItemDetail}>
+      {itemData && itemData.title && (
+        <Helmet>
+          <title>{`${itemData.title} | Mercado Libre 📦`}</title>
+          <meta
+            name="description"
+            content={`Envíos gratis en el día ✓ Comprá online de manera segura con Compra Protegida ${itemData.title}`}
+          />
+        </Helmet>
+      )}
+
       {itemData && itemData.categories && (
         <div className={styles.ItemDetail__Breadcrumb}>
           <Breadcrumb categories={itemData.categories} />
